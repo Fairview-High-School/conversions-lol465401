@@ -3,7 +3,7 @@ import java.util.Scanner;
  * This application converts between various units of measurement.
  *
  * @author Salah Oulad-Daoud
- * @version 8/23/2024
+ * @version 8/26/2024
  */
 public class Conversions
 {
@@ -17,6 +17,11 @@ public class Conversions
         System.out.println("4. Meters to Feet");
         System.out.println("5. Ounces to Milliliters");
         System.out.println("6. Milliliters to Ounces");
+        System.out.println("7. Teaspoon to Tablespoon");
+        System.out.println("8. Tablespoon to Teaspoon");
+        System.out.println("9. Gallons to Cups");
+        System.out.println("10. Cups to Gallons");
+
         
         
         //Add 2 more conversions, each both ways, to add choices 7, 8, 9, and 10.
@@ -62,9 +67,50 @@ public class Conversions
             System.out.println("Enter Ounces: ");
             double ounces = keyboard.nextDouble();
             keyboard.nextLine();
-            double millimeters = (ouces * 29.5735);
+            double millimeters = (ounces * 29.574);
             System.out.println(ounces + " ounces is " + millimeters + " millimeters");
         }
+        if (selection == 6)
+        {
+            System.out.println("Enter Millimeters ");
+            double millimeters = keyboard.nextDouble();
+            keyboard.nextLine();
+            double ounces = (millimeters/29.574);
+            System.out.println(millimeters + " millimeters is " + ounces + " ounces");
+        }
+        if (selection == 7)
+        {
+            System.out.println("Enter Teaspoon ");
+            double teaspoon = keyboard.nextDouble();
+            keyboard.nextLine();
+            double tablespoon = (teaspoon/3);
+            System.out.println(teaspoon + " teaspoon is " + tablespoon + " tablespoon");
+        }
+        if (selection == 8)
+        {
+            System.out.println("Enter Tablespoon ");
+            double tablespoon = keyboard.nextDouble();
+            keyboard.nextLine();
+            double teaspoon = (tablespoon * 3);
+            System.out.println(tablespoon + " tablespoon is " + teaspoon + " teaspoon");
+        }
+        if (selection == 9)
+        {
+            System.out.println("Enter Gallon ");
+            double gallon = keyboard.nextDouble();
+            keyboard.nextLine();
+            double cups = (gallon * 16);
+            System.out.println(gallon + " gallon is " + cups + " cups");
+        }
+        if (selection == 10)
+        {
+            System.out.println("Enter Cups ");
+            double cups = keyboard.nextDouble();
+            keyboard.nextLine();
+            double gallon = (cups/16);
+            System.out.println(cups + " cups is " + gallon + " gallon");
+        }
+
         //add more if statements here.
     }
 }
