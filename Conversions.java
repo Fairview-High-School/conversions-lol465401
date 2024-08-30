@@ -100,7 +100,7 @@ public class Conversions
             double gallon = keyboard.nextDouble();
             keyboard.nextLine();
             double cups = (gallon * 16);
-            System.out.println(gallon + " gallon is " + cups + " cups");
+            System.out.println(gallon + " gallons is " + cups + " cups");
         }
         if (selection == 10)
         {
@@ -108,7 +108,7 @@ public class Conversions
             double cups = keyboard.nextDouble();
             keyboard.nextLine();
             double gallon = (cups/16);
-            System.out.println(cups + " cups is " + gallon + " gallon");
+            System.out.println(cups + " cups is " + gallon + " gallons");
         }
 
         //add more if statements here.
